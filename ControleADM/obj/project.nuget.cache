@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "feYmGHAQyfcwtydLlJ+Zd98vI5kbpaBoFzLkM5kHFtLypJ2EvQlQXBW0l/9FDvJBTdir7AUKRHfyuI0pTyfnhQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Nane-Admin\\source\\repos\\ControleADM\\ControleADM\\ControleADM\\ControleADM.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Nane-Admin\\.nuget\\packages\\npgsql\\5.0.0\\npgsql.5.0.0.nupkg.sha512",
+    "C:\\Users\\Nane-Admin\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}

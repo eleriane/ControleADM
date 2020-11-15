@@ -1,0 +1,13 @@
+C:\Users\Nane-Admin\source\repos\ControleADM\ControleADM\ControleADM\bin\Debug\netcoreapp3.1\ControleADM.exe
+C:\Users\Nane-Admin\source\repos\ControleADM\ControleADM\ControleADM\bin\Debug\netcoreapp3.1\ControleADM.deps.json
+C:\Users\Nane-Admin\source\repos\ControleADM\ControleADM\ControleADM\bin\Debug\netcoreapp3.1\ControleADM.runtimeconfig.json
+C:\Users\Nane-Admin\source\repos\ControleADM\ControleADM\ControleADM\bin\Debug\netcoreapp3.1\ControleADM.runtimeconfig.dev.json
+C:\Users\Nane-Admin\source\repos\ControleADM\ControleADM\ControleADM\bin\Debug\netcoreapp3.1\ControleADM.dll
+C:\Users\Nane-Admin\source\repos\ControleADM\ControleADM\ControleADM\bin\Debug\netcoreapp3.1\ControleADM.pdb
+C:\Users\Nane-Admin\source\repos\ControleADM\ControleADM\ControleADM\obj\Debug\netcoreapp3.1\ControleADM.csprojAssemblyReference.cache
+C:\Users\Nane-Admin\source\repos\ControleADM\ControleADM\ControleADM\obj\Debug\netcoreapp3.1\ControleADM.AssemblyInfoInputs.cache
+C:\Users\Nane-Admin\source\repos\ControleADM\ControleADM\ControleADM\obj\Debug\netcoreapp3.1\ControleADM.AssemblyInfo.cs
+C:\Users\Nane-Admin\source\repos\ControleADM\ControleADM\ControleADM\obj\Debug\netcoreapp3.1\ControleADM.csproj.CoreCompileInputs.cache
+C:\Users\Nane-Admin\source\repos\ControleADM\ControleADM\ControleADM\obj\Debug\netcoreapp3.1\ControleADM.dll
+C:\Users\Nane-Admin\source\repos\ControleADM\ControleADM\ControleADM\obj\Debug\netcoreapp3.1\ControleADM.pdb
+C:\Users\Nane-Admin\source\repos\ControleADM\ControleADM\ControleADM\obj\Debug\netcoreapp3.1\ControleADM.genruntimeconfig.cache
