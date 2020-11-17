@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ControleADM.Models;
+using ControleADM.Negocio;
+using System;
+using System.Collections.Generic;
 
 namespace ControleADM
 {
@@ -6,7 +9,10 @@ namespace ControleADM
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            PessoaDAO objPessoa = new PessoaDAO();
+            Pessoa pessoa = new Pessoa();
+            pessoa.id = 1;
+            List<Pessoa> retorno = objPessoa.consulte(pessoa);
         }
     }
 }

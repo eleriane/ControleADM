@@ -11,3 +11,5 @@ C:\Users\Nane-Admin\source\repos\ControleADM\ControleADM\ControleADM\obj\Debug\n
 C:\Users\Nane-Admin\source\repos\ControleADM\ControleADM\ControleADM\obj\Debug\netcoreapp3.1\ControleADM.dll
 C:\Users\Nane-Admin\source\repos\ControleADM\ControleADM\ControleADM\obj\Debug\netcoreapp3.1\ControleADM.pdb
 C:\Users\Nane-Admin\source\repos\ControleADM\ControleADM\ControleADM\obj\Debug\netcoreapp3.1\ControleADM.genruntimeconfig.cache
+C:\Users\Nane-Admin\source\repos\ControleADM\ControleADM\ControleADM\bin\Debug\netcoreapp3.1\Npgsql.dll
+C:\Users\Nane-Admin\source\repos\ControleADM\ControleADM\ControleADM\obj\Debug\netcoreapp3.1\ControleADM.csproj.CopyComplete

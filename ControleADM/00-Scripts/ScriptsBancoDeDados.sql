@@ -1,7 +1,12 @@
-﻿-- Table: public."Endereco"
+﻿/*commit 
+DROP TABLE public."Pessoa_telefone";
+DROP TABLE public."Pessoa";
+DROP TABLE public."Endereco";
+DROP TABLE public."Telefone";
+DROP TABLE public."Telefone_Tipo";
 
--- DROP TABLE public."Endereco";
 
+-- Table: public."Endereco" 
 CREATE TABLE public."Endereco"
 (
     "Id" integer NOT NULL,
@@ -13,25 +18,16 @@ CREATE TABLE public."Endereco"
     "Estado" character varying(20) COLLATE pg_catalog."default",
     CONSTRAINT "Endereco_pkey" PRIMARY KEY ("Id")
 )
-WITH (
-    OIDS = FALSE
-)
+WITH (   OIDS = FALSE )
 TABLESPACE pg_default;
 
-ALTER TABLE public."Endereco"
-    OWNER to postgres;
+ALTER TABLE public."Endereco"     OWNER to postgres;
+     
 
-
-
-
-
--- Table: public."Pessoa"
-
--- DROP TABLE public."Pessoa";
-
+-- Table: public."Pessoa" 
 CREATE TABLE public."Pessoa"
 (
-    "CPF" bigint[],
+    "CPF" bigint,
     "Id" integer NOT NULL,
     "Nome" character varying(256) COLLATE pg_catalog."default",
     "Endereco" integer,
@@ -41,38 +37,72 @@ CREATE TABLE public."Pessoa"
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
 )
-WITH (
-    OIDS = FALSE
-)
+WITH (    OIDS = FALSE)
 TABLESPACE pg_default;
 
-ALTER TABLE public."Pessoa"
-    OWNER to postgres;
+ALTER TABLE public."Pessoa"    OWNER to postgres;
 
 -- Index: fki_Pessoa_endereco_fk
-
--- DROP INDEX public."fki_Pessoa_endereco_fk";
 
 CREATE INDEX "fki_Pessoa_endereco_fk"
     ON public."Pessoa" USING btree
     ("Endereco")
     TABLESPACE pg_default;
+     
+
+
+
+
+-- Table: public."Telefone_Tipo" 
+CREATE TABLE public."Telefone_Tipo"
+(
+    "Id" integer NOT NULL,
+    "Tipo" character varying(10) COLLATE pg_catalog."default",
+    CONSTRAINT "Telefone_Tipo_pkey" PRIMARY KEY ("Id")
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public."Telefone_Tipo"
+    OWNER to postgres; 
+
+
+  
+
+-- Table: public."Telefone"  
+CREATE TABLE public."Telefone"
+(
+    "Id" integer NOT NULL,
+    "Numero" integer,
+    "DDD" integer,
+    "Tipo" integer,
+    CONSTRAINT "Telefone_pkey" PRIMARY KEY ("Id"),
+    CONSTRAINT "Telefone_Telefone_tipo" FOREIGN KEY ("Tipo")
+        REFERENCES public."Telefone_Tipo" ("Id") MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+WITH (  OIDS = FALSE)
+TABLESPACE pg_default;
+
+ALTER TABLE public."Telefone"
+    OWNER to postgres;
+
+-- Index: fki_Telefone_Telefone_tipo
+ 
+CREATE INDEX "fki_Telefone_Telefone_tipo"     ON public."Telefone" USING btree
+    ("Tipo")     TABLESPACE pg_default;
+
+
+ 
 
 
 
 
 
-
-
-
-
-
-
-
-
--- Table: public."Pessoa_telefone"
-
--- DROP TABLE public."Pessoa_telefone";
+-- Table: public."Pessoa_telefone" 
 
 CREATE TABLE public."Pessoa_telefone"
 (
@@ -98,16 +128,12 @@ ALTER TABLE public."Pessoa_telefone"
 
 -- Index: fki_Pessoa_Telefone_fk
 
--- DROP INDEX public."fki_Pessoa_Telefone_fk";
-
 CREATE INDEX "fki_Pessoa_Telefone_fk"
     ON public."Pessoa_telefone" USING btree
     ("Id_pessoa")
     TABLESPACE pg_default;
 
 -- Index: fki_Pessoa_telefone_telefone_fk
-
--- DROP INDEX public."fki_Pessoa_telefone_telefone_fk";
 
 CREATE INDEX "fki_Pessoa_telefone_telefone_fk"
     ON public."Pessoa_telefone" USING btree
@@ -116,97 +142,13 @@ CREATE INDEX "fki_Pessoa_telefone_telefone_fk"
 
 
 
+    --- inserts
+    INSERT INTO public."Endereco"(
+	"Id", "Logradouro", "Numero", "CEP", "Bairro", "Cidade", "Estado")
+	VALUES (1, 'rua das flores', 50, 89025333, 'Jaguere', 'São Paulo', 'SP');
 
 
 
-
-
-
-
-
-
-
-
-
-
-
--- Table: public."Telefone"
-
--- DROP TABLE public."Telefone";
-
-CREATE TABLE public."Telefone"
-(
-    "Id" integer NOT NULL,
-    "Numero" integer,
-    "DDD" integer,
-    "Tipo" integer,
-    CONSTRAINT "Telefone_pkey" PRIMARY KEY ("Id"),
-    CONSTRAINT "Telefone_Telefone_tipo" FOREIGN KEY ("Tipo")
-        REFERENCES public."Telefone_Tipo" ("Id") MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION
-)
-WITH (
-    OIDS = FALSE
-)
-TABLESPACE pg_default;
-
-ALTER TABLE public."Telefone"
-    OWNER to postgres;
-
--- Index: fki_Telefone_Telefone_tipo
-
--- DROP INDEX public."fki_Telefone_Telefone_tipo";
-
-CREATE INDEX "fki_Telefone_Telefone_tipo"
-    ON public."Telefone" USING btree
-    ("Tipo")
-    TABLESPACE pg_default;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
--- Table: public."Telefone_Tipo"
-
--- DROP TABLE public."Telefone_Tipo";
-
-CREATE TABLE public."Telefone_Tipo"
-(
-    "Id" integer NOT NULL,
-    "Tipo" character varying(10) COLLATE pg_catalog."default",
-    CONSTRAINT "Telefone_Tipo_pkey" PRIMARY KEY ("Id")
-)
-WITH (
-    OIDS = FALSE
-)
-TABLESPACE pg_default;
-
-ALTER TABLE public."Telefone_Tipo"
-    OWNER to postgres;
-
-
-
-
-
-
-
-
-
-
-
-
+    INSERT INTO public."Pessoa"(
+	"CPF", "Id", "Nome", "Endereco")
+	VALUES (77788899998, 1, 'Teste nome',1);  */

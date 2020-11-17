@@ -1,5 +1,8 @@
 ﻿using ControleADM.DataAccess;
 using ControleADM.Models;
+using Npgsql;
+using System;
+using System.Collections.Generic;
 
 namespace ControleADM.Negocio
 {
@@ -19,10 +22,37 @@ namespace ControleADM.Negocio
         {
             return true;
         }
-        public long consulte(Pessoa pessoa)
+        public List<Pessoa> consulte(Pessoa p)
         {
-            return 0;
-        }
+            List<Pessoa> pessoas = new List<Pessoa>();
 
+            NpgsqlDataReader reader = null;
+            try
+            {
+                string query =  "select * from " + '"'  + "Pessoa" + '"' ;
+                dal.OpenConnection();
+                reader = dal.ExecuteDataReader(query);
+
+                while (reader.Read())
+                {
+                    Pessoa pessoa = new Pessoa();
+                    pessoa.id = Convert.ToInt32(reader["id"]);
+                    pessoa.nome = reader["nome"].ToString();
+                    pessoa.cpf = long.Parse( reader["cpf"].ToString());
+                    pessoas.Add(pessoa);
+                }
+                reader.Close();
+            }
+            finally
+            {
+                if (reader != null)
+                {
+                    reader.Close();
+                }
+                this.dal.CloseConection();
+            }
+            return pessoas;
+        }
+         
     }
 }
