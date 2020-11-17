@@ -150,5 +150,5 @@ CREATE INDEX "fki_Pessoa_telefone_telefone_fk"
 
 
     INSERT INTO public."Pessoa"(
-	"CPF", "Id", "Nome", "Endereco")
+	"Id", "CPF", "Nome", "Endereco")
 	VALUES (77788899998, 1, 'Teste nome',1);  */

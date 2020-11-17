@@ -1,5 +1,4 @@
 ﻿using ControleADM.Models;
-using System;
 using System.Collections.Generic;
 
 namespace ControleADM.DataAccess

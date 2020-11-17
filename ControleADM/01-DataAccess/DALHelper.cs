@@ -14,7 +14,7 @@ namespace ControleADM.DataAccess
         string port = "5432";
         string database = "ControleAdm";
         string userId = "postgres";
-        string userPassword = "Matheus2307";
+        string userPassword = "xxxx";
 
         public NpgsqlConnection conexaoBD { get; set; }
         public string stringConexaoBD { get; set; }
