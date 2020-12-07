@@ -1,5 +1,5 @@
 ﻿-- Table: public."Endereco"
-
+-- teste
 -- DROP TABLE public."Endereco";
 
 CREATE TABLE public."Endereco"
