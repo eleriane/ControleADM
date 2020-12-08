@@ -12,8 +12,8 @@ namespace ControleADM.DataAccess
     {
         string server = "localhost";
         string port = "5432";
-        string database = "macoratti";
-        string userId = "macoratti";
+        string database = "xxxxx";
+        string userId = "xxxxxx";
         string userPassword = "numsey";
 
         public NpgsqlConnection conexaoBD { get; set; }
